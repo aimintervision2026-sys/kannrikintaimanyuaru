@@ -353,11 +353,110 @@
   .part-banner { background:#FFFAF4; border:2px solid #F7C99A !important; }
   .to-top { background:#2F80ED; }
   @media print { .to-top { display:none; } .sec-back { display:none; } }
+/* ===== THEME: ハイケア初期登録マニュアルの配色・雰囲気に合わせる ===== */
+:root{ --teal:#2f9e9c; --teal-d:#1f7674; --teal-l:#e6f4f3; --ink:#24323a; --sub:#5d6b73; --line:#dde4e6; --bg2:#f6f8f8;
+  --mark:#e0453a; --org:#e8603c; --org-d:#c8452a; --org-l:#fff1ec; --amb:#e8a33c; --amb-d:#b0701a; --amb-l:#fff8e6; --blu:#5b8fd6; --blu-d:#2f63a8; --vio:#9a7ad0; --vio-d:#6a4aa3; }
+html body{ background:var(--bg2) !important; color:var(--ink) !important; font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic UI","Meiryo",sans-serif !important; line-height:1.75; }
+a{ color:var(--teal-d) !important; }
+strong{ color:inherit !important; }
+.callout.bad .callout-body strong{ color:var(--org-d) !important; }
+.callout.warn .callout-body strong{ color:var(--amb-d) !important; }
+.callout.info .callout-body strong, .callout.good .callout-body strong{ color:var(--teal-d) !important; }
+/* hero */
+.cover{ background:var(--teal) !important; text-align:left !important; padding:28px 18px !important; }
+.cover::before{ display:none !important; }
+.cover-inner{ max-width:880px; margin:0 auto; }
+.cover-eyebrow{ font-size:13px !important; letter-spacing:.08em !important; color:#fff !important; opacity:.9; border:none !important; padding:0 !important; margin:0 !important; text-transform:none !important; }
+.cover h1{ font-size:26px !important; line-height:1.4 !important; margin:6px 0 8px !important; text-shadow:none !important; color:#fff !important; }
+.cover-sub{ font-size:14.5px !important; color:#fff !important; opacity:.92; margin:0 0 14px !important; }
+.cover-date{ display:inline-block; background:#fff !important; color:var(--teal-d) !important; font-weight:700; border-radius:999px; padding:6px 16px; font-size:15px; }
+/* cards */
+.section{ background:#fff !important; border:1px solid var(--line) !important; border-radius:12px !important; box-shadow:none !important; overflow:visible !important; }
+.section-header, .mgr .section-header{ background:#fff !important; border:none !important; border-bottom:1px solid var(--line) !important; padding:20px 22px 14px !important; display:flex; align-items:center; gap:12px; }
+.section-num{ width:44px !important; height:44px !important; min-width:44px; border-radius:50% !important; background:var(--teal) !important; color:#fff !important; display:grid !important; place-items:center; font-weight:700 !important; font-size:17px !important; padding:0 !important; }
+.mgr .section-num{ background:var(--amb) !important; }
+.section-title, .mgr .section-title{ color:var(--ink) !important; font-size:21px !important; font-weight:700 !important; }
+.section-body h2{ font-size:17px !important; color:var(--ink) !important; border:none !important; padding:0 0 0 10px !important; border-left:4px solid var(--teal) !important; margin:24px 0 10px !important; background:none !important; }
+.mgr .section-body h2{ border-left-color:var(--amb) !important; }
+/* tables */
+table th, th{ background:var(--teal-l) !important; color:var(--ink) !important; border:1px solid var(--line) !important; font-weight:700; }
+table td{ border:1px solid var(--line) !important; }
+.table-wrap{ border:none !important; box-shadow:none !important; }
+.code-badge{ background:var(--teal) !important; color:#fff !important; }
+/* callouts */
+.callout{ border-radius:6px !important; border:none !important; border-left:4px solid var(--teal) !important; background:var(--teal-l) !important; }
+.callout .callout-title{ color:var(--teal-d) !important; }
+.callout.warn{ background:var(--amb-l) !important; border-left-color:var(--amb) !important; } .callout.warn .callout-title{ color:var(--amb-d) !important; }
+.callout.bad{ background:var(--org-l) !important; border-left-color:var(--org) !important; } .callout.bad .callout-title{ color:var(--org-d) !important; }
+.callout.good{ background:var(--teal-l) !important; border-left-color:var(--teal) !important; } .callout.good .callout-title{ color:var(--teal-d) !important; }
+.callout-body{ color:var(--ink) !important; }
+/* steps */
+.step-item{ background:#fff !important; border:none !important; box-shadow:none !important; padding:6px 0 !important; }
+.step-num{ width:28px !important; height:28px !important; min-width:28px; border-radius:50% !important; border:2px solid var(--teal) !important; background:#fff !important; color:var(--teal-d) !important; font-weight:700 !important; font-size:14px !important; display:grid !important; place-items:center; }
+.mgr .step-num{ border-color:var(--amb) !important; color:var(--amb-d) !important; }
+.step-text .sub{ color:var(--sub) !important; }
+/* checklist / QA */
+.ck-item{ background:#fff !important; border:1px solid var(--line) !important; border-radius:10px !important; box-shadow:none !important; }
+.ck-box{ border-color:var(--teal) !important; }
+.qa-card{ background:#fff !important; border:1px solid var(--line) !important; border-left:6px solid var(--teal) !important; border-radius:10px !important; box-shadow:none !important; }
+.qa-q{ color:var(--teal-d) !important; }
+/* screenshots */
+.screenshot-wrap{ border:1px solid var(--line) !important; border-radius:8px !important; box-shadow:none !important; background:#fff !important; }
+.screenshot-wrap img{ cursor:zoom-in; }
+.screenshot-cap{ color:var(--sub) !important; background:#fff !important; font-size:13.5px !important; border-top:1px solid var(--line) !important; }
+/* intro / toc */
+.goal-box{ background:linear-gradient(135deg,#e6f4f3,#f3faf9) !important; border:2px solid var(--teal) !important; border-radius:14px !important; box-shadow:none !important; }
+.goal-box .goal-label{ color:var(--teal-d) !important; }
+.goal-box p, .goal-box strong{ color:var(--ink) !important; }
+.toc{ background:#fff !important; border:1px solid var(--line) !important; border-radius:12px !important; box-shadow:none !important; }
+.toc-head{ color:var(--teal-d) !important; }
+.toc-list > li > a{ color:var(--ink) !important; }
+.toc-list > li > a:hover{ background:var(--teal-l) !important; }
+.toc-num{ background:var(--teal) !important; border-radius:999px !important; }
+.toc-sub a{ color:var(--sub) !important; }
+.toc-part{ color:var(--amb-d) !important; }
+#toc-mgr .toc-num{ background:var(--amb) !important; }
+/* quick buttons */
+.quick{ background:#fff !important; border:1px solid var(--line) !important; border-radius:12px !important; box-shadow:none !important; }
+.quick-head{ color:var(--ink) !important; }
+.c-blue{ --qc:var(--blu); --qbg:#fff; --qbd:var(--line); } .c-green{ --qc:var(--teal); --qbg:#fff; --qbd:var(--line); }
+.c-orange{ --qc:var(--amb); --qbg:#fff; --qbd:var(--line); } .c-purple{ --qc:var(--vio); --qbg:#fff; --qbd:var(--line); }
+.c-teal{ --qc:var(--teal-d); --qbg:#fff; --qbd:var(--line); } .c-red{ --qc:var(--org); --qbg:#fff; --qbd:var(--line); }
+.quick-grid a{ border:1px solid var(--line) !important; border-left:6px solid var(--qc) !important; color:var(--ink) !important; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+.quick-grid a:hover{ background:var(--qc) !important; color:#fff !important; border-color:var(--qc) !important; }
+/* switch buttons */
+.sw{ border-width:3px !important; }
+.sw-mgr{ background:var(--amb-d) !important; border-color:#8f5a12 !important; color:#fff !important; }
+.sw-emp{ background:var(--teal-d) !important; border-color:#165a58 !important; color:#fff !important; }
+/* emphasis boxes */
+.resp{ background:var(--org-l) !important; border:2px solid var(--org) !important; border-radius:12px !important; }
+.resp-t{ color:var(--org-d) !important; } .resp-b strong{ color:var(--org-d) !important; }
+.flow{ border:2px solid var(--org) !important; border-radius:12px !important; }
+.flow-t{ color:var(--org-d) !important; }
+.fl-step{ background:#fff !important; border:1px solid var(--line) !important; }
+.fl-n{ color:var(--org) !important; }
+.fl-arrow{ color:var(--org) !important; }
+.fl-last{ background:var(--org) !important; border-color:var(--org) !important; }
+.fl-end{ color:var(--org-d) !important; }
+.part-banner{ background:var(--teal-l) !important; border:2px solid var(--teal) !important; border-radius:12px !important; }
+.part-banner .t{ color:var(--teal-d) !important; }
+#part-mgr{ background:var(--amb-l) !important; border-color:var(--amb) !important; } #part-mgr .t{ color:var(--amb-d) !important; }
+.todo{ background:#fff6c7 !important; border-bottom:2px solid #e8c400; color:var(--ink) !important; }
+.to-top{ background:var(--teal) !important; color:#fff !important; }
+.sec-back{ color:var(--teal-d) !important; }
+.page-footer{ background:none !important; color:var(--sub) !important; border:none !important; }
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(20,30,35,.88);display:none;z-index:50;overflow:auto;padding:16px}
+.lb.on{display:block}
+.lb .inner{max-width:1600px;margin:40px auto 0}
+.lb .inner img{width:100%;display:block;border-radius:6px;background:#fff}
+.lb button{position:fixed;top:10px;right:12px;font-size:16px;padding:8px 14px;border:0;border-radius:8px;background:#fff;color:#24323a;font-weight:700;cursor:pointer}
+@media print{ .cover{ background:#fff !important; border-bottom:3px solid var(--teal); } .cover h1,.cover-eyebrow,.cover-sub{ color:var(--ink) !important; } .lb{display:none !important} }
 </style>
 </head>
 <body>
 <div class="cover" id="top"><div class="cover-inner">
-  <div class="cover-eyebrow">株式会社エイムインタービジョン　社内マニュアル</div>
+  <div class="cover-eyebrow">リハビリ＆フィットネス寿リハ　総務部</div>
   <h1>勤怠・労務管理マニュアル【管理職用】</h1>
   <div class="cover-sub">勤怠奉行（奉行Edge 勤怠管理クラウド）の操作方法・申請ルールと、月次締め・労務管理</div>
   <div class="cover-date">2026年11月改訂</div>
@@ -731,5 +830,16 @@
 </div>
 <div class="page-footer">株式会社エイムインタービジョン　総務部　2026年11月<br>お問い合わせ：総務部 岩本・山田（076-240-6500）</div>
 <a class="to-top" href="#switch">▲ 最初へ</a>
+<div class="lb" id="lb" role="dialog" aria-label="画像の拡大表示"><button type="button" id="lbClose">閉じる ✕</button><div class="inner"><img id="lbImg" alt=""></div></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), im=document.getElementById('lbImg');
+  document.querySelectorAll('.screenshot-wrap img').forEach(function(i){ i.addEventListener('click',function(){ im.src=i.src; im.alt=i.alt; lb.classList.add('on'); }); });
+  function close(){ lb.classList.remove('on'); im.src=''; }
+  document.getElementById('lbClose').addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
 </body>
 </html>
